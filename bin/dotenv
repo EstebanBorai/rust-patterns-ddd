@@ -1,0 +1,18 @@
+#!/bin/bash
+
+RUST_LOG="warn,info,error,debug"
+PORT="3000"
+POSTGRES_USER="msend"
+POSTGRES_PASSWORD="msend"
+POSTGRES_DB="msend"
+JWT_SECRET="msend"
+
+echo -e \
+  "RUST_LOG=$RUST_LOG\n" \
+  "PORT=$PORT\n" \
+  "POSTGRES_USER=$POSTGRES_USER\n" \
+  "POSTGRES_PASSWORD=$POSTGRES_PASSWORD\n" \
+  "POSTGRES_DB=$POSTGRES_DB\n" \
+  "JWT_SECRET=$JWT_SECRET\n" \
+  "DATABASE_URL=postgres://$POSTGRES_USER:$POSTGRES_PASSWORD@127.0.0.1:5432/$POSTGRES_DB\n" \
+  > .env
